@@ -1,0 +1,48 @@
+body > div.owl-carousel.owl-theme > div.owl-wrapper-outer > div > div:nth-child(1) {
+	width: 100%;
+	background: url('../img/background.jpg');
+	background-repeat: repeat-x;
+	background-position:center;
+
+
+	min-height: 500px;
+}
+
+body > div.owl-carousel.owl-theme > div.owl-wrapper-outer > div > div:nth-child(2) {
+	width: 100%;
+	background: url('../img/background02.jpg');
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+
+	min-height: 500px;
+}
+
+body > div.owl-carousel.owl-theme > div.owl-wrapper-outer > div > div:nth-child(3) {
+	width: 100%;
+	background: url('../img/background03.jpg');
+	background-size: auto 500px;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center top;
+
+	min-height: 500px;
+}
+
+body > div.owl-carousel.owl-theme > div.owl-wrapper-outer > div > div:nth-child(1) > div > div {
+	margin-top: 200px;
+	text-align: center;
+	background-color: transparent;
+}
+
+body > div.owl-carousel.owl-theme > div.owl-wrapper-outer > div > div:nth-child(2) > div > div {
+	margin-top: 20px;
+	text-align: center;
+	background-color: transparent;
+}
+
+body > div.owl-carousel.owl-theme > div.owl-wrapper-outer > div > div:nth-child(3) > div > div {
+	bottom: 0px;
+	text-align: center;
+	background-color: transparent;
+}
