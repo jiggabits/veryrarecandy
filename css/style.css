@@ -38,9 +38,49 @@ body {
 	z-index: 1;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #section-1 > div {
 	text-align: center;
 	background-color: transparent;
+	margin-top: 50px;
 }
 
 #section-1 > div > h1 > span {
@@ -52,7 +92,7 @@ body {
 
 #section-1 > div  > p {
 	font-family: "brandon-grotesque";
-	font-weight: 700;
+	font-weight: 400;
 	letter-spacing: .4em;
 }
 
