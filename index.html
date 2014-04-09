@@ -12,14 +12,14 @@
 	    <meta name="apple-mobile-web-app-capable" content="yes" />
 
 		<link rel="stylesheet" href="./css/owl.carousel.css" type="text/css">
+		<link rel="stylesheet" href="./css/onepage-scroll.css" type="text/css">
 		<link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
 		<link rel="stylesheet" href="./css/style.css" type="text/css">
 
 	</head>
 	<body>
 
-
-		<ol class="curtains">
+		<ol class="panels">
 			<li id="section-1" class="cover">
 
 				<div class="jumbotron">
@@ -42,8 +42,22 @@
 				</div>
 
 			</li>
+
 			<li id="section-4" class>
+				<h1>Work</h1>
+
+				<div id="owl-example" class="owl-carousel">
+					<div><img src="./img/work/soundcloud.png"></div>
+					<div> Your Content </div>
+					<div> Your Content </div>
+					<div> Your Content </div>
+					<div> Your Content </div>
+					<div> Your Content </div>
+					<div> Your Content </div>
+				</div>
+
 			</li>
+
 			<li id="section-5" class>
 			</li>
 			<li id="section-6" class>
@@ -56,22 +70,36 @@
 		<script src="./js/bootstrap.js"></script>
 
 		<script src="./js/owl.carousel.js"></script>
+		<script src="./js/jquery.onepage-scroll.js"></script>
 		<script src="./js/initialize-carousel.js"></script>
 
 		<script>
-		  /**$(window).resize( function() {
+		$(function() {
+			$(document).ready(function() {
+				$(".panels").onepage_scroll({
+				   sectionContainer: "li", 
+				   easing: "ease",
+				   animationTime: 1000,
+				   pagination: true,
+				   updateURL: false
+				});
+			});
 
-		  	repositionBack();
-		    
-		  })
+			parallax = function() {
+				console.log('tryna parallax');
 
-		  function repositionBack() {
-		  	var item = $('#section-2').width();
-		  	var img = $('img.carousel-web').width();
+				var scrolled = $(window).scrollTop();
 
-		  	var left = (item < img) ? (img - item) * -(.5) : '0';
-		  	$('img.carousel-web').css('background-position', left);
-		  }**/
+				$('#section-3').css('background-position', '0px ' + -(scrolled * 0.2) + 'px');
+
+			}
+
+			$(window).scroll(function(e){
+				console.log('scroll');
+				parallax();
+			});
+		})
+
 		</script>
 
 
