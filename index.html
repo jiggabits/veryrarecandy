@@ -30,14 +30,14 @@
 			</li>
 
 			<li id="section-2" class>
-				<div class="col-md-10 col-md-offset-1">
+				<div>
 					<p>The idea of style and competing for the best style is the key to all forms of rocking.</p>
 					<p>&mdash; Style Wars, 1983</p>
 				</div>
 			</li>
 
 			<li id="section-3" class>
-				<div class="about col-md-6 col-md-offset-6">
+				<div class="about col-xs-7 col-xs-offset-5 col-sm-7 col-sm-offset-5 col-md-7 col-md-offset-5">
 					<span> My name's Lolly and I'm into making things on the computer.</span>
 				</div>
 
@@ -57,6 +57,22 @@
 
 		<script src="./js/owl.carousel.js"></script>
 		<script src="./js/initialize-carousel.js"></script>
+
+		<script>
+		  /**$(window).resize( function() {
+
+		  	repositionBack();
+		    
+		  })
+
+		  function repositionBack() {
+		  	var item = $('#section-2').width();
+		  	var img = $('img.carousel-web').width();
+
+		  	var left = (item < img) ? (img - item) * -(.5) : '0';
+		  	$('img.carousel-web').css('background-position', left);
+		  }**/
+		</script>
 
 
 	</body>
