@@ -2,7 +2,8 @@ $(function() {
 
 	$(".owl-carousel").owlCarousel({
 
-		singleItem: true
+		singleItem: false,
+		items: 3
 	
 	});
 
