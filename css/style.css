@@ -1,12 +1,14 @@
 /** fonts 
 content:  "brandon-grotesque";
 headers: "old-standard";
+work: "futura-pt";
 **/
 
 body {
 	font-family: "brandon-grotesque";
 	height: 100%;
 	overflow-x: hidden;
+	padding: 0;
 }
 
 .panels {
@@ -74,8 +76,12 @@ body {
 #section-1 {
 	z-index: 6;
 	height: 100%;
-	background-image: url('../img/background01.jpg');
-	background-size: 100%;
+	background-color: #FFFFFF;
+}
+
+#logo {
+	margin-top: 100px;
+	visibility: hidden;
 }
 
 #section-1 > div {
@@ -261,62 +267,10 @@ body {
 /** SECTION 4 - WORK **/
 #section-4 {
 	z-index: 3;
-}
-
-.owl-item > div > div.inside {
-	width: 100%;
-	background-color: transparent;
-	color: #000;
-	font-weight: 400;
-	font-size: 1.5em;
-	text-align: center;
-}
-
-div.owl-item {
-	border-radius: 100%;
-	background-size: 500%;
-}
-
-div.owl-item:hover {
+	font-family: "futura-pt";
+	background: url('../img/background01.jpg') 100%;
 	background-size: 100%;
 }
-
-.owl-item:nth-child(1) {
-	height: 275px;
-	border-radius: 0px;
-	background-color: #000;
-	color: #FFF;
-	font-weight: 700;
-}
-
-.owl-item:nth-child(2) {
-	height: 275px;
-	background: url('../img/work/wtffm.png') top center;
-	color: #FFF;
-	font-weight: 700;
-}
-
-.owl-item:nth-child(3) {
-	height: 275px;
-	background: url('../img/work/bloom.png') top center;
-	color: #FFF;
-	font-weight: 700;
-}
-
-.owl-item:nth-child(4) {
-	height: 275px;
-	background: url('../img/work/99centbrains.png') top center;
-	color: #FFF;
-	font-weight: 700;
-}
-
-
-
-
-
-
-
-
 
 
 

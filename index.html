@@ -16,17 +16,20 @@
 		<link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
 		<link rel="stylesheet" href="./css/bootstrap-responsive.css" type="text/css">
 
+		<link rel="stylesheet" href="./css/animations.css" type="text/css">
 		<link rel="stylesheet" href="./css/style.css" type="text/css">
-
 	</head>
 	<body>
 
 		<ol class="panels">
 			<li id="section-1" class="cover">
 
-				<div class="jumbotron">
-					<h1><span>Very Rare Candy</span></h1>
-					<p><span>The creative space of Lolly Dormido</span></p>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 slideDown">
+							<img id="logo" src="./img/logo.png" class="img-responsive">
+						</div>
+					</div>
 				</div>
 
 			</li>
@@ -47,41 +50,6 @@
 
 			<li id="section-4" class>
 
-				<div id="owl-example" class="owl-carousel">
-
-					<div>
-						<h1>Recent projects</h1>
-						<p><a href="#">Download my full resume here.</a></p>
-					</div>
-
-					<div> 
-						<div class="hover">
-						</div>
-						<div class="inside">
-							<span>wtf.fm 2.0</span>
-						</div>
-					</div>
-
-					<div>
-						<div class="hover">
-						</div>
-						<div class="inside">
-							<span>makebloom.com</span>
-						</div>
-					</div>
-					
-					<div>
-						<div class="hover">
-						</div>
-						<div class="inside">
-							<span>99centbrains.com</span>
-						</div>
-					</div>
-					
-					<div> Your Content </div>
-					<div> Your Content </div>
-					<div> Your Content </div>
-				</div>
 
 			</li>
 
@@ -110,6 +78,9 @@
 				   pagination: true,
 				   updateURL: false
 				});
+
+				$('#logo').css('visibility', 'visible');
+
 			});
 
 			parallax = function() {
@@ -128,7 +99,6 @@
 		})
 
 		</script>
-
 
 	</body>
 </html>
