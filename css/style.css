@@ -404,6 +404,8 @@ body {
 
 	#section-3 > div {
 		font-size: 1.5em;
+		top: 50px;
+
 	}
 
 	#card > figure.front > div, #card > figure.back > div {
