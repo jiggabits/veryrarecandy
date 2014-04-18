@@ -41,7 +41,7 @@
 				</div>
 			</li>
 
-			<li id="section-3" class>
+			<li id="section-3">
 
 
 				<div class="about col-xs-9 col-xs-offset-3 col-sm-7 col-sm-offset-5 col-md-7 col-md-offset-5">
@@ -49,12 +49,23 @@
 				  <div id="card">
 
 				    <figure class="front">
-				    	<div>My name's Lolly and I'm into making things on the computer.</div>
+				    	<div>
+				    		<h1>The Basics</h1>
+				    		<p>Hey, my name is Lolly and this is my digital canvas.</p>
+				    		<p>I'm a web developer with an education in music.  I excel at both as well as curating content for social media marketing.</p>  
+				    		<p>Hover or swipe this text if you wanna get in touch.</p>
+				    	</div>
 				    </figure>
 
 				    <figure class="back">
 				    	<div>
-				    		Let's work on something lols@veryrarecandy.com
+				    		<h1>Lolly Dormido</h1>
+				    		lols@veryrarecandy.com
+
+				    		<p>LinkedIn Icon</p>
+			    			<p>Twitter Icon</p>
+			    			<p>Instagram</p>
+
 				    	</div>
 				    </figure>
 				  </div>
@@ -122,7 +133,9 @@
 			});
 
 
-			$('#card')
+			//For card flip reference:
+			//http://desandro.github.io/3dtransforms/docs/card-flip.html
+			$('#section-3')
 				.swipeEvents()
 				.bind("swipeLeft",  function(){ $(this).toggleClass('flipped'); })
 				.bind("swipeRight", function(){ $(this).toggleClass('flipped'); });

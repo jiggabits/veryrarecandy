@@ -16,6 +16,10 @@ body {
 	background: #CC99FF;
 }
 
+.onepage-pagination {
+	top: 40%;
+}
+
 .panels {
 	padding: 0;
 	margin: 0;
@@ -93,6 +97,10 @@ body {
 	text-align: center;
 	background-color: transparent;
 	margin-top: 50px;
+}
+
+#section-1 > div > div {
+	margin: 0px;
 }
 
 #section-1 > div > h1 > span {
@@ -223,18 +231,24 @@ body {
 #section-3 {
 	z-index: 4;
 	height: 100%;
-	background: url('../img/background_about.jpeg');
+	/**background: url('../img/background_about.jpeg');
+	background-size: 100%;
+	background-position: top center;**/
+
+	background: -webkit-radial-gradient(bottom left, ellipse cover, rgba(255,184,222,0.2) 0%,rgba(219, 255, 194,0.5) 50%),  
+	url('../img/background_about.jpeg');  
 	background-size: 100%;
 	background-position: top center;
+
 }
 
 #section-3 > div {
 	top: 100px;
-	font-family: "old-standard";
-	color: #FFF;
-    text-shadow: 1px 1px 0px #000000;
-	font-size: 4em;
-	line-height: 1.3em;
+	font-family: "brandon-grotesque";
+	color: #000;
+	font-size: 2em;
+	font-weight: 700;
+	line-height: 1.2em;
 }
 
 .cardContainer { 
@@ -284,17 +298,18 @@ body {
 	transform: rotateY( 180deg );
 }
 
-#card > figure.front > div {
-	padding: 0px 20px;
-	border-left: 1px solid #F5F4E2;
+#card > figure.front > div > h1 {
+	font-family: "old-standard";
+	font-style: italic;
+	font-size: 2em;
+	letter-spacing: -5px;
+	color: #E5FFF7;
 }
 
-#card > figure.back > div {
+#card > figure.front > div, #card > figure.back > div {
 	padding: 0px 20px;
-	border-left: 1px solid #F5F4E2;
+	border-left: 5px solid #F5F4E2;
 }
-
-
 
 
 
@@ -390,4 +405,9 @@ body {
 	#section-3 > div {
 		font-size: 1.5em;
 	}
+
+	#card > figure.front > div, #card > figure.back > div {
+		padding: 0px 10px;
+	}
+
 }
