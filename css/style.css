@@ -232,6 +232,7 @@ body {
 	top: 100px;
 	font-family: "old-standard";
 	color: #FFF;
+    text-shadow: 1px 1px 0px #000000;
 	font-size: 4em;
 	line-height: 1.3em;
 }
@@ -284,11 +285,14 @@ body {
 }
 
 #card > figure.front > div {
-	padding: 20px;
+	padding: 0px 20px;
 	border-left: 1px solid #F5F4E2;
 }
 
-
+#card > figure.back > div {
+	padding: 0px 20px;
+	border-left: 1px solid #F5F4E2;
+}
 
 
 
