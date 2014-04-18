@@ -46,6 +46,14 @@
 					<span> My name's Lolly and I'm into making things on the computer.</span>
 				</div>
 
+
+				<section class="cardContainer">
+				  <div id="card">
+				    <figure class="front">1</figure>
+				    <figure class="back">2</figure>
+				  </div>
+				</section>
+
 			</li>
 
 			<li id="section-4" class>
@@ -67,6 +75,7 @@
 		<script src="./js/owl.carousel.js"></script>
 		<script src="./js/jquery.onepage-scroll.js"></script>
 		<script src="./js/initialize-carousel.js"></script>
+
 
 		<script>
 		$(function() {
@@ -92,10 +101,21 @@
 
 			}
 
+
+
+
 			$(window).scroll(function(e){
 				console.log('scroll');
 				parallax();
 			});
+
+			document.getElementById('card').addEventListener( 'click', function(){
+				console.log('tryna do shit');
+				$(this).toggleClass('flipped');
+			});
+
+
+
 		})
 
 		</script>
