@@ -233,59 +233,60 @@ body {
 	font-family: "old-standard";
 	color: #FFF;
 	font-size: 4em;
-	padding: 20px;
 	line-height: 1.3em;
-	border-left: 1px solid #F5F4E2;
 }
 
 .cardContainer { 
-  width: 200px;
-  height: 260px;
-  position: relative;
+	width: 100%;
+	height: 1;
+	position: relative;
 
-  -webkit-perspective: 800px;
-  perspective: 800px;
+	-webkit-perspective: 800px;
+	perspective: 800px;
 }
 
 #card {
-  width: 100%;
-  height: 100%;
-  position: relative;
+	width: 100%;
+	height: 100%;
+	position: relative;
 
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 
-  -webkit-transition: -webkit-transform 1s;
-  transition: transform 1s;
+	-webkit-transition: -webkit-transform 1s;
+	transition: transform 1s;
 }
 
-#card.flipped {
-  -webkit-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
+#card.flipped, #card:hover {
+	-webkit-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
 }
 
 #card figure {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
 
-  -webkit-backface-visibility: hidden;  
-  backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;  
+	backface-visibility: hidden;
 }
 
 #card > figure.front {
-  background-color: #000;
+	background-color: transparent;
 }
 
 #card > figure.back {
-  background-color: #FFF;
+	background-color: transparent;
 
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY( 180deg );
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY( 180deg );
 }
 
-
+#card > figure.front > div {
+	padding: 20px;
+	border-left: 1px solid #F5F4E2;
+}
 
 
 

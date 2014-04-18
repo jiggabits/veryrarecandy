@@ -42,17 +42,26 @@
 			</li>
 
 			<li id="section-3" class>
+
+
 				<div class="about col-xs-7 col-xs-offset-5 col-sm-7 col-sm-offset-5 col-md-7 col-md-offset-5">
-					<span> My name's Lolly and I'm into making things on the computer.</span>
+				<section class="cardContainer">
+				  <div id="card">
+
+				    <figure class="front">
+				    	<div>My name's Lolly and I'm into making things on the computer.</div>
+				    </figure>
+
+				    <figure class="back">
+				    	Let's work on something lols@veryrarecandy.com
+				    </figure>
+				  </div>
+				</section>
+
 				</div>
 
 
-				<section class="cardContainer">
-				  <div id="card">
-				    <figure class="front">1</figure>
-				    <figure class="back">2</figure>
-				  </div>
-				</section>
+
 
 			</li>
 
@@ -70,12 +79,12 @@
 
 	    <script src="./js/jquery-1.7.js"></script>
 	    <script src="./js/jquery-1.11.0.min.js"></script>
-		<script src="./js/bootstrap.js"></script>
+		<script src="./js/bootstrap."></script>
 
+		<script src="./js/jquery.swipe-events.js"></script>
 		<script src="./js/owl.carousel.js"></script>
 		<script src="./js/jquery.onepage-scroll.js"></script>
 		<script src="./js/initialize-carousel.js"></script>
-
 
 		<script>
 		$(function() {
@@ -101,20 +110,20 @@
 
 			}
 
-
-
-
 			$(window).scroll(function(e){
 				console.log('scroll');
 				parallax();
 			});
 
 			document.getElementById('card').addEventListener( 'click', function(){
-				console.log('tryna do shit');
 				$(this).toggleClass('flipped');
 			});
 
 
+			$('#card')
+				.swipeEvents()
+				.bind("swipeLeft",  function(){ $(this).toggleClass('flipped'); })
+				.bind("swipeRight", function(){ $(this).toggleClass('flipped'); });
 
 		})
 
