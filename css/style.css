@@ -355,7 +355,7 @@ body {
 #section-4 {
 	z-index: 3;
 	font-family: Courier;
-	background: url('../img/background01.jpg') 100%;
+	background: url('../img/bg07.png') 100%;
 	background-size: 100%;
 }
 
@@ -363,18 +363,21 @@ body {
 	text-align: center;
 }
 
-#section-4 > div.row.work > div > h3 > span {
-	background-color: #8FDDC1;
-	color: #FFF;
+#section-4 > div.row.work > div > h2 > span {
+	background-color: transparent;
+	color: transparent;
+	text-shadow: 0px 0px 3px #FFFFFF;
 	font-weight: 800;
 	font-style: italic;
 	font-family: "futura-pt";
 }
 
 #section-4 > div.work > div > a {
-	display: block;
-	font-weight: 800;
-	color: #000;
+	font-size: 1.4em;
+	display: inline-block;
+	font-weight: 400;
+	color: transparent;
+	text-shadow: 0px 0px 3px #FFFFFF;
 	background-color: transparent;
 
 	-webkit-transition: all 0.2s ease;
@@ -384,11 +387,7 @@ body {
 }
 
 #section-4 > div.work > div > a:hover {
-	font-size: 2em;
 	text-decoration: none;
-	font-family: "futura-pt";
-	background-color: #CC99FF;
-	color: #FFF;
 }
 
 #section-4 > div.skills {
@@ -413,6 +412,22 @@ body {
 	text-align: left;
 }
 
+.blink {
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+	-webkit-animation-duration: .6s;
+	-moz-animation-name: blinker;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+	-moz-animation-duration: .6s;
+	animation-name: blinker;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+	animation-duration: .6s;
+	font-size: 20px;
+}
 
 
 
