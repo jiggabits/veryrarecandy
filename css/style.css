@@ -257,7 +257,6 @@ body {
 	url('../img/background_about.jpeg');  
 	background-size: 100%;
 	background-position: top center;
-
 }
 
 #section-3 > div {
@@ -269,62 +268,17 @@ body {
 	font-weight: 400;
 }
 
-.cardContainer { 
-	width: 100%;
-	height: 1;
-	position: relative;
 
-	-webkit-perspective: 800px;
-	perspective: 800px;
-}
-
-#card {
-	width: 100%;
-	height: 100%;
-	position: relative;
-
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-
-	-webkit-transition: -webkit-transform 1s;
-	transition: transform 1s;
-}
-
-#card.flipped, #card:hover {
-	-webkit-transform: rotateY( 180deg );
-	transform: rotateY( 180deg );
-}
-
-#card figure {
-	display: block;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-
-	-webkit-backface-visibility: hidden;  
-	backface-visibility: hidden;
-}
-
-#card > figure.front {
-	background-color: transparent;
-}
-
-#card > figure.back {
-	background-color: transparent;
-
-	-webkit-transform: rotateY(180deg);
-	transform: rotateY( 180deg );
-}
-
-#card > figure.front > div > h1, #card > figure.back > div > h1{
+#section-3 > div > h1{
 	font-family: "old-standard";
 	font-style: italic;
 	font-size: 2em;
+	margin: 0;
 	letter-spacing: -5px;
 	color: #E5FFF7;
 }
 
-#card > figure.front > div, #card > figure.back > div {
+#section-3 > div {
 	padding: 0px 20px;
 	border-left: 5px solid #F5F4E2;
 }
@@ -362,6 +316,7 @@ body {
 	font-family: "futura-pt";
 	background: url('../img/bg09.jpg') 100%;
 	background-size: 100%;
+	background-position: top center;
 	color: transparent;
 	text-shadow: 0px 0px 3px #FFFFFF;
 }
@@ -451,6 +406,10 @@ body {
 		background-size: 920px 720px;
 		background-position: top center;
 	}
+	#section-4 {
+		background-size: 1000px 660px;
+		background-position: top center;
+	}
 }
 
 @media (min-width: 321px) and (max-width: 743px) {
@@ -467,9 +426,9 @@ body {
 	}
 }
 
-@media (min-width: 321px) and (max-width: 626px) {
+@media (min-width: 321px) and (max-width: 760px) {
 	#section-3 > div {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 }
 
@@ -495,13 +454,9 @@ body {
 	}
 
 	#section-3 > div {
-		font-size: 1.5em;
+		font-size: 1em;
 		top: 50px;
 
-	}
-
-	#card > figure.front > div, #card > figure.back > div {
-		padding: 0px 10px;
 	}
 
 }

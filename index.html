@@ -53,47 +53,21 @@
 
 
 				<div class="about col-xs-9 col-xs-offset-3 col-sm-7 col-sm-offset-5 col-md-7 col-md-offset-5">
-				<section class="cardContainer">
-				  <div id="card">
 
-				    <figure class="front">
-				    	<div>
 				    		<h1>The Basics</h1>
-				    		<p>Sup.  My name is Lolly and this is my digital canvas.</p>
-				    		<p>I'm a web developer with a lot of front-end experience and some back-end.  And while I like design, I enjoy and play well in code.</p>
-				    		<p>I also curate content for social media.</p>
-				    		<p></p>
-				    		<p class="swipeArrows" style="color: #FFF">&#8596;</p>
-
-				    	</div>
-				    </figure>
-
-				    <figure class="back">
-				    	<div>
-				    		<p>
-					    		<h1>Lolly Dormido</h1>
-					    		<a href="mailto:lols@99centbrains.com">lols@veryrarecandy.com</a><BR>
-					    		San Francisco, CA
-				    		</p>
-
-				    		
-				    		<p>
-				    			<small>*You can also fill out the form below to get in touch.</small>
-			    			</p>
-
-			    			<p class="swipeArrows" style="color: #FFF">&#8596;</p>
-
-				    	</div>
-				    </figure>
-				  </div>
-				</section>
-
+				    		<p>My name's Lolly and I'm a Web Developer living in San Francisco.  I enjoy making music, riding my bike and eating bomb food.</p>
+				    		<p>My fav things to do at work are to play with code and make creative ideas come to life.  I also like curating content for social media and finding new artists to work with.</p>
+				    		<p><span class="glyphicon glyphicon-phone"> </p>
 				</div>
 
-
-
-
 			</li>
+
+
+
+
+
+
+
 
 			<li id="section-4" class>
 
@@ -176,16 +150,9 @@
 				parallax();
 			});
 
-			document.getElementById('card').addEventListener( 'click', function(){
-				$(this).toggleClass('flipped');
-			});
 
 			//For card flip reference:
 			//http://desandro.github.io/3dtransforms/docs/card-flip.html
-			$('#section-3')
-				.swipeEvents()
-				.bind("swipeLeft",  function(){ $(this).toggleClass('flipped'); })
-				.bind("swipeRight", function(){ $(this).toggleClass('flipped'); });
 
 		})
 
