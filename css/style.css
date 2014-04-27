@@ -58,15 +58,20 @@ body {
 	z-index: 1;
 }
 
+.glyphicon.glyphicon-chevron-down {
+	font-size: 2em;
+	color: #EEEEEE;
+}
 
 
+.onepage-pagination li a:before {
+	background: #FFFFFF;
+}
 
-
-
-
-
-
-
+.onepage-pagination li a.active:before {
+	border: 1px solid #F1FFED;
+	background: #F1FFED;
+}
 
 
 
@@ -97,7 +102,8 @@ body {
 #section-1 {
 	z-index: 6;
 	height: 100%;
-	background-color: #FFFFFF;
+	background: url('../img/bg08.gif');
+	background: -webkit-radial-gradient(bottom left, ellipse cover, rgba(241,204,255,0.2) 0%,rgba(247,248,255,0.5) 50%);
 }
 
 #logo {
@@ -190,7 +196,6 @@ body {
 	width:70%;
 	min-width: 740px;
 	height:90%;
-	color: #000;
 	border: 15px solid #FFF;
 }
 
@@ -354,9 +359,16 @@ body {
 /** SECTION 4 - WORK **/
 #section-4 {
 	z-index: 3;
+<<<<<<< HEAD
 	font-family: Courier;
 	background: url('../img/bg07.png') 100%;
+=======
+	font-family: "futura-pt";
+	background: url('../img/bg06.jpg') 100%;
+>>>>>>> master
 	background-size: 100%;
+	color: transparent;
+	text-shadow: 0px 0px 3px #FFFFFF;
 }
 
 #section-4 > div.work {
@@ -375,7 +387,11 @@ body {
 #section-4 > div.work > div > a {
 	font-size: 1.4em;
 	display: inline-block;
+<<<<<<< HEAD
 	font-weight: 400;
+=======
+	font-weight: 700;
+>>>>>>> master
 	color: transparent;
 	text-shadow: 0px 0px 3px #FFFFFF;
 	background-color: transparent;
@@ -388,6 +404,7 @@ body {
 
 #section-4 > div.work > div > a:hover {
 	text-decoration: none;
+<<<<<<< HEAD
 }
 
 #section-4 > div.skills {
@@ -406,6 +423,8 @@ body {
 	font-weight: 800;
 	font-style: italic;
 	text-align: right;
+=======
+>>>>>>> master
 }
 
 #section-4 > div > div:nth-child(2) {
@@ -428,6 +447,18 @@ body {
 	animation-duration: .6s;
 	font-size: 20px;
 }
+<<<<<<< HEAD
+=======
+
+.footer {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	padding: 5px;
+	text-shadow: 0px 0px 2px #FFFFFF;
+}
+>>>>>>> master
 
 
 
