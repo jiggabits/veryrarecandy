@@ -378,21 +378,18 @@ body {
 	background-size: 100%;
 	background-position: top center;
 	color: transparent;
-	text-shadow: 0px 0px 3px #FFFFFF;
+	text-shadow: 0px 0px 2px #FFFFFF;
 }
 
-#section-4 > .title {
-	position: absolute;
-	top: 15px;
-	left: 15px;
-	font-family: Courier;
+#section-4 > div.row.work > div > span.title {
+	font-weight: 700;
 }
 
 #section-4 > div.work {
 	text-align: center;
 }
 
-#section-4 > div.row.work > div > h2, #section-4 > div.row.work > div > h1  {
+#section-4 > div.row.work > div > h1  {
 	background-color: transparent;
 	color: transparent;
 	text-shadow: 0px 0px 3px #FFFFFF;
@@ -400,9 +397,8 @@ body {
 
 #section-4 > div.work > div > a {
 	display: inline-block;
-	font-weight: 700;
 	color: transparent;
-	text-shadow: 0px 0px 3px #FFFFFF;
+	text-shadow: 0px 0px 2px #FFFFFF;
 	background-color: transparent;
 
 	-webkit-transition: all 0.2s ease;
@@ -534,6 +530,15 @@ body {
 
 	#card > figure.front > div > h1, #card > figure.back > div > h1 {
 		letter-spacing: 0px;
+	}
+
+	#section-4 > div:nth-child(2) > h1 {
+		font-size: 1em;
+	}
+
+	#section-4 > div.row.work {
+		font-size: .9em;
+		line-height: 1em;
 	}
 
 }
