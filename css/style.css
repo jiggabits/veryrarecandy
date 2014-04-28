@@ -238,10 +238,6 @@ body {
 #section-3 {
 	z-index: 4;
 	height: 100%;
-	/**background: url('../img/background_about.jpeg');
-	background-size: 100%;
-	background-position: top center;**/
-
 	background: -webkit-radial-gradient(bottom left, ellipse cover, rgba(255,184,222,0.2) 0%,rgba(219, 255, 194,0.5) 50%),  
 	url('../img/background_about.jpeg');  
 	background-size: 100%;
@@ -272,18 +268,80 @@ body {
 	border-left: 5px solid #F5F4E2;
 }
 
-.contact > a {
+.contact > a , .contact a:hover {
 	font-family: "old-standard";
 	font-style: italic;
 	font-size: 1em;
 	margin: 0;
 	color: #E5FFF7;
-	text-decoration: underline;
-}
-
-.contact a:hover {
 	text-decoration: none;
 }
+
+#card > figure.front > div, #card > figure.back > div {
+	padding: 0px 20px;
+	border-left: 5px solid #F5F4E2;
+}
+
+#card > figure.front > div > h1, #card > figure.back > div > h1 {
+	font-family: "old-standard";
+	font-style: italic;
+	font-size: 2em;
+	margin: 0;
+	letter-spacing: -5px;
+	color: #E5FFF7;
+}
+
+.cardContainer { 
+	width: 100%;
+	height: 1;
+	position: relative;
+
+	-webkit-perspective: 800px;
+	perspective: 800px;
+}
+
+#card {
+	width: 100%;
+	height: 100%;
+	position: relative;
+
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-transition: -webkit-transform 1s;
+	transition: transform 1s;
+}
+
+#card.flipped {
+	-webkit-transform: rotateY( 180deg );
+	transform: rotateY( 180deg );
+}
+
+#card figure {
+	display: block;
+	position: absolute;
+	width: 100%;
+ 	height: 100%;
+ 
+ 	-webkit-backface-visibility: hidden;  
+	backface-visibility: hidden;
+}
+ 
+#card > figure.front {
+ 	background-color: transparent;
+}
+ 
+#card > figure.back {
+	background-color: transparent;
+
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY( 180deg );
+}
+
+#card > figure.front > div, #card > figure.back > div {
+	padding: 0px 10px;
+}
+
 
 
 
@@ -314,7 +372,7 @@ body {
 /** SECTION 4 - WORK **/
 #section-4 {
 	z-index: 3;
-	font-family: "futura-pt";
+	font-family: Courier;
 	background: url('../img/bg09.jpg') 100%;
 	background-size: 100%;
 	background-position: top center;
@@ -322,11 +380,18 @@ body {
 	text-shadow: 0px 0px 3px #FFFFFF;
 }
 
+#section-4 > .title {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	font-family: Courier;
+}
+
 #section-4 > div.work {
 	text-align: center;
 }
 
-#section-4 > div.row.work > div > h2 > span {
+#section-4 > div.row.work > div > h2, #section-4 > div.row.work > div > h1  {
 	background-color: transparent;
 	color: transparent;
 	text-shadow: 0px 0px 3px #FFFFFF;
@@ -357,21 +422,27 @@ body {
 	text-align: left;
 }
 
+@-webkit-keyframes blinker {from{opacity:1.0;}to{opacity:0.0;}}
+@-moz-keyframes blinker {from{opacity:1.0;}to{opacity:0.0;}}
+@keyframes blinker {from{opacity:1.0;}to{opacity:0.0;}}
+
 .blink {
 	text-decoration: blink;
+
 	-webkit-animation-name: blinker;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
 	-webkit-animation-duration: .6s;
+
 	-moz-animation-name: blinker;
 	-moz-animation-iteration-count: infinite;
 	-moz-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
 	-moz-animation-duration: .6s;
+
 	animation-name: blinker;
 	animation-iteration-count: infinite;
 	animation-timing-function: cubic-bezier(1.0,0,0,1.0);
 	animation-duration: .6s;
-	font-size: 20px;
 }
 
 .footer {
@@ -445,6 +516,7 @@ body {
 
 	#section-2 > div {
 		min-width:320px;
+		border: 10px solid #FFF;
 		width: 100%;
 		height:100%;
 		margin-top: 0px;
@@ -463,8 +535,8 @@ body {
 		top: 50px;
 	}
 
-	#section-3 > div > h1 {
-		letter-spacing: -1px;
+	#card > figure.front > div > h1, #card > figure.back > div > h1 {
+		letter-spacing: 0px;
 	}
 
 }

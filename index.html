@@ -56,10 +56,53 @@
 
 				<div class="about col-xs-9 col-xs-offset-3 col-sm-7 col-sm-offset-5 col-md-7 col-md-offset-5">
 
-				    		<h1>The Basics</h1>
-				    		<p>My name's Lolly and I'm a Web Developer living in San Francisco.  I enjoy making music, riding my bike and eating bomb food.</p>
-				    		<p>My fav things to do at work are to play with code and make creative ideas come to life.  I also like curating content for social media and finding new artists to work with.</p>
-				    		<p class="contact"><a href="mailto:lols@veryrarecandy.com">Send me an email.</a></p>
+
+					<section class="cardContainer">
+					  <div id="card">
+	  
+					    <figure class="front">
+					    	<div>
+					    		<h1>The Basics</h1>
+					    		<p>My name's Lolly and I'm a Web Developer living in San Francisco.  I enjoy making music, riding my bike and eating bomb food.</p>
+					    		<p>My fave things to do at work are to play with code and make creative ideas come to life.  I also like curating content for social media and finding new artists to work with.</p>
+					    		<p class="contact"><a href="#">Get in touch >></a></p>
+
+					    	</div>
+					    </figure>
+
+					    <figure class="back">
+					    	<div>
+
+ 					    		<h1>Have a project in mind?</h1>
+
+ 					    		<form method="post" action"#">
+
+ 					    			<div class="form-inline">
+	 					    			<input type="text" name="name" placeholder="Name" class="form-control">
+
+	 					    			<input type="text" name="email_address" placeholder="Email" class="form-control">
+	 					    		</div>
+
+	 					    		<div class="form-inline">
+
+										<input type="text" name="budget" placeholder="Project Budget" class="form-control">
+
+										<input type="text" name="deadline" placeholder="Project Deadline" class="form-control">
+
+	 					    		</div>
+
+						    		<textarea name="description" rows="3" class="form-control" id="form_description" placeholder="Your project in 200 characters or less..." maxlength="200"></textarea>
+						    		<p id="description_feedback" class="text-danger"></p>
+					    		</form>
+
+					    		<p class="contact"><a href="#">Hide form.</a></p>
+
+
+	 				    	</div>
+	 				    </figure>
+	 				  </div>
+	 				</section>
+
 				</div>
 
 			</li>
@@ -73,12 +116,20 @@
 
 			<li id="section-4" class>
 
+				<div class="title">
+
+				</div>
+
+				<div class="row">
+					<h1> /Users/Lolly/Sites/very\ rare\ candy/selected\ works<span class="blink"> &#9608;</span></h1>
+				</div>
+
 				<div class="row work">
 
 					<div class="col-md-6 col-md-offset-3">
 						<!-- when you tap/swipe over this area on the phone,
 						the font changes on touch -->
-						<h2><span>Web Development</span></h2>
+						<h2>Web Development</h2>
 
 						<a href="#">wtf.fm</a><BR>
 						<a href="#">99centbrains.com</a><BR>
@@ -86,7 +137,7 @@
 						<a href="#">BrainBuilder</a><BR>
 						<a href="#">Yoshirt!</a><BR><BR>
 
-						<h2><span>Curation</span></h2>
+						<h2>Curation</h2>
 
 						<a href="#">99centbrains</a><BR>
 						<a href="#">Catwang</a><BR>
@@ -116,7 +167,7 @@
 
 	    <script src="./js/jquery-1.7.js"></script>
 	    <script src="./js/jquery-1.11.0.min.js"></script>
-		<script src="./js/bootstrap."></script>
+		<script src="./js/bootstrap.js"></script>
 
 		<script src="./js/jquery.swipe-events.js"></script>
 		<script src="./js/owl.carousel.js"></script>
@@ -153,8 +204,43 @@
 			});
 
 
-			//For card flip reference:
-			//http://desandro.github.io/3dtransforms/docs/card-flip.html
+
+
+
+
+
+
+			$('.contact').on('click', function() {
+				console.log('toggle');
+				$('#card').toggleClass('flipped');
+
+			})
+  
+  			//For card flip reference:
+  			//http://desandro.github.io/3dtransforms/docs/card-flip.html
+			$('#section-3')
+				.swipeEvents()
+				.bind("swipeLeft",  function(){ $('#card').toggleClass('flipped'); })
+				.bind("swipeRight", function(){ $('#card').toggleClass('flipped'); });
+
+
+
+
+
+
+
+			// Form shit
+			$(document).ready(function() {
+			    var text_max = 200;
+			    $('#description_feedback').html(text_max + ' characters remaining');
+
+			    $('#form_description').keyup(function() {
+			        var text_length = $('#form_description').val().length;
+			        var text_remaining = text_max - text_length;
+
+			        $('#description_feedback').html(text_remaining + ' characters remaining');
+			    });
+			});
 
 		})
 
