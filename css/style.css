@@ -265,12 +265,13 @@ body {
 }
 
 .contact > a , .contact a:hover {
-	font-family: "old-standard";
-	font-style: italic;
-	font-size: 1em;
+	font-family: "brandon-grotesque";
+	font-weight: 700;
+	font-size: .75em;
 	margin: 0;
-	color: #E5FFF7;
+	color: #000000;
 	text-decoration: none;
+	border-bottom: 2px #E5FFF7 solid;
 }
 
 #card > figure.front > div, #card > figure.back > div {
@@ -339,7 +340,18 @@ body {
 }
 
 
+#description_feedback {
+	float: right;
+	font-size: .75em;
+	font-weight: 700;
+}
 
+#ss-submit {
+	border: 0px;
+	background-color: #E5FFF7;
+	border-radius: 4px;
+	margin-top: 5px;
+}
 
 
 
