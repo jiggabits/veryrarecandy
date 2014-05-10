@@ -251,6 +251,7 @@ body {
 	font-size: 2em;
 	line-height: 1.6em;
 	font-weight: 400;
+	padding: 0px 20px;
 }
 
 
@@ -261,11 +262,6 @@ body {
 	margin: 0;
 	letter-spacing: -5px;
 	color: #E5FFF7;
-}
-
-#section-3 > div {
-	padding: 0px 20px;
-	border-left: 5px solid #F5F4E2;
 }
 
 .contact > a , .contact a:hover {
@@ -341,9 +337,6 @@ body {
 #card > figure.front > div, #card > figure.back > div {
 	padding: 0px 10px;
 }
-
-
-
 
 
 

@@ -65,13 +65,13 @@
 					    		<h1>The Basics</h1>
 					    		<p>My name's Lolly and I'm a Web Developer living in San Francisco.  I enjoy making music, riding my bike and eating bomb food.</p>
 					    		<p>My fave things to do at work are to play with code and make creative ideas come to life.  I also like curating content for social media and finding new artists to work with.</p>
-					    		<p class="contact"><a href="#">Get in touch >></a></p>
+					    		<p class="contact" id="hideForm"><a href="#">Get in touch >></a></p>
 
 					    	</div>
 					    </figure>
 
 					    <figure class="back">
-					    	<div>
+					    	<div id="form_div">
 
  					    		<h1>Have a project in mind?</h1>
 
@@ -79,26 +79,68 @@
 
  					    		<!-- <form id="callus" target="_self" onsubmit="" action="javascript: postContactToGoogle()">-->
 
- 					    		<form method="post" action"#">
 
- 					    			<div class="form-inline">
-	 					    			<input type="text" name="name" placeholder="Name" class="form-control">
 
-	 					    			<input type="text" name="email_address" placeholder="Email" class="form-control">
-	 					    		</div>
 
-	 					    		<div class="form-inline">
 
-										<input type="text" name="budget" placeholder="Project Budget" class="form-control">
 
-										<input type="text" name="deadline" placeholder="Project Deadline" class="form-control">
 
-	 					    		</div>
 
-						    		<textarea name="description" rows="3" class="form-control" id="form_description" placeholder="Your project in 200 characters or less..." maxlength="200"></textarea>
-						    		<p id="description_feedback" class="text-danger"></p>
-					    		</form>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 					    		<form action="" method="POST" id="project_inquiry" target="_self" onsubmit="">
+
+								<div class="form-inline">
+									<input type="text" placeholder="Name" name="name" value="" class="form-control" id="name" dir="auto" aria-label="Name" aria-required="true" required="" title="">
+
+									<input type="email" placeholder="Email Address" name="email_address" value="" class="form-control" id="email_address" dir="auto" aria-label="Email Address  Please enter a valid email address." aria-required="true" required="" title="Please enter a valid email address.">
+								</div>
+
+								<div class="form-inline">
+									<input type="text" placeholder="Project Budget" name="budget" value="" class="form-control" id="budget" dir="auto" aria-label="Project Budget  " title="">
+
+									<input type="text" placeholder="Project Deadline" name="deadline" value="" class="form-control" id="deadline" dir="auto" aria-label="Project Deadline  " title="">
+								</div>
+
+								<textarea name="form_description" rows="8" cols="0" class="form-control" id="form_description" dir="auto" placeholder="Project description..."></textarea>
+
+					    		<p id="description_feedback" class="text-danger"></p>
+
+								<input type="hidden" name="draftResponse" value="[,,&quot;-3015567126508970757&quot;]
+								">
+								<input type="hidden" name="pageHistory" value="0">
+
+								<input type="hidden" name="fbzx" value="-3015567126508970757">
+
+								<input type="submit" name="submit" value="Submit" id="ss-submit">
+								</form>
+								<div class="text-success" id="formSuccess" style="display:none">Thank you for your inquiry!</div>
 					    		<p class="contact"><a href="#">Hide form.</a></p>
 
 
@@ -215,9 +257,7 @@
 
 
 			$('.contact').on('click', function() {
-				console.log('toggle');
 				$('#card').toggleClass('flipped');
-
 			})
   
   			//For card flip reference:
@@ -255,7 +295,10 @@
 
 
 
-
+			$('#project_inquiry').submit(function(e) {
+				postContactToGoogle();
+				return false;
+			})
 
 
 		    function validateEmail(email) {
@@ -264,27 +307,38 @@
 		    }
 		    
 		    function postContactToGoogle(){
-		        var name = $j('#name').val();
-		        var email = $j('#email').val();
-		        var feed = $j('#feed').val();
-		        if ((name !== "") && (email !== "") && ((feed !== "") && (validateEmail(email)))) {
-		            $j.ajax({
-		                url: "https://docs.google.com/yourFormURL/formResponse",
-		                data: {"entry.1" : name, "entry.3" : email, "entry.4": feed},
+
+		    	console.log('entering postContactToGoogle');
+
+		        var email_address = $('#email_address').val();
+            		name = $("#name").val();
+            		budget = $("#budget").val();
+            		deadline = $("#deadline").val();
+            		description = $("#form_description").val();
+
+            	console.log('info = ' + name + ' ' + email_address + ' ' + budget + ' ' + deadline + ' ' + description);
+
+		        if ((email_address !== "") && (validateEmail(email_address))) {
+
+					console.log('email validation is passing');
+
+		            $.ajax({
+
+		                url: "https://docs.google.com/a/veryrarecandy.com/forms/d/1qXEly_H4k66zYlmVGiTwwc6bGzZaHl5hd0sIro3seiw/formResponse",
+		                data: {"entry.282431184" : name, "entry.1971786647" : email_address, "entry.428649396" : budget, "entry.1003887148" : deadline, "entry.726005093" : description },
 		                type: "POST",
 		                dataType: "xml",
+
 		                statusCode: {
 		                    0: function (){
 		 
-		                        $j('#name').val("");
-		                        $j('#email').val("");
-		                        $j('#feed').val("");
+
+		                        $("#project_inquiry").hide();
+		                        $("#formSuccess").css('display', 'block');
 		                        //Success message
 		                    },
 		                    200: function (){
-		                        $j('#name').val("");
-		                        $j('#email').val("");
-		                        $j('#feed').val("");
+		                        $("#formSuccess").css('display', 'block');
 		                        //Success Message
 		                    }
 		                }
