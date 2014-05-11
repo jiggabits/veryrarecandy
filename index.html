@@ -232,6 +232,22 @@
 
 				$('#logo').css('visibility', 'visible');
 
+				$('input').on('touchend', function() {
+					$(this).focus();
+				})
+
+				$('textarea').on('touchend', function() {
+					$(this).focus();
+				})
+
+				$('#ss-submit').on('touchend', function(e) {
+					$('#project_inquiry').submit();
+				})
+
+				$('a').on('touchend', function() {
+
+				})
+
 			});
 
 			parallax = function() {
