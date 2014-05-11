@@ -241,11 +241,12 @@
 				})
 
 				$('#ss-submit').on('touchend', function(e) {
+					$(this).focus();
 					$('#project_inquiry').submit();
 				})
 
 				$('a').on('touchend', function() {
-
+ 					window.open($(this).attr('href'), '_blank');
 				})
 
 			});

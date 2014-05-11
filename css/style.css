@@ -354,7 +354,8 @@ body {
 }
 
 .text-success {
-	color: #7A547A;
+	color: #000000;
+	font-weight:700;
 }
 
 
