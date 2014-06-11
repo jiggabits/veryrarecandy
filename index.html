@@ -230,6 +230,13 @@
 				   updateURL: false
 				});
 
+				$("#section-1").on('touchend',function(){
+
+					event.preventDefault();
+					$(".panels").moveTo(2);
+
+				});
+
 				$('#logo').css('visibility', 'visible');
 
 				$('input').on('touchend', function() {
@@ -252,7 +259,6 @@
 			});
 
 			parallax = function() {
-				console.log('tryna parallax');
 
 				var scrolled = $(window).scrollTop();
 
@@ -261,7 +267,6 @@
 			}
 
 			$(window).scroll(function(e){
-				console.log('scroll');
 				parallax();
 			});
 
@@ -324,19 +329,13 @@
 		    
 		    function postContactToGoogle(){
 
-		    	console.log('entering postContactToGoogle');
-
 		        var email_address = $('#email_address').val();
             		name = $("#name").val();
             		budget = $("#budget").val();
             		deadline = $("#deadline").val();
             		description = $("#form_description").val();
 
-            	console.log('info = ' + name + ' ' + email_address + ' ' + budget + ' ' + deadline + ' ' + description);
-
 		        if ((email_address !== "") && (validateEmail(email_address))) {
-
-					console.log('email validation is passing');
 
 		            $.ajax({
 
