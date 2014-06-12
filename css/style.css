@@ -186,6 +186,7 @@ body {
 	min-width: 740px;
 	height:90%;
 	border: 15px solid #FFF;
+	color: #FFF;
 }
 
 #section-2 > div > p {
@@ -337,6 +338,10 @@ body {
 
 #card > figure.front > div, #card > figure.back > div {
 	padding: 0px 10px;
+}
+
+#form_div > div.row > div{
+	margin-left: 15px;
 }
 
 
