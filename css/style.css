@@ -16,6 +16,10 @@ work: "futura-pt";
 	display: inline-block;
 }
 
+.onepage-pagination {
+	z-index: 1000;
+}
+
 body {
 	font-family: "brandon-grotesque";
 	height: 100%;
