@@ -64,9 +64,8 @@
 					    	<div>
 					    		<h1>The Basics</h1>
 					    		<p>My name's Lolly and I'm a freelance Web Developer, full-time artist living in San Francisco.  Very Rare Candy is a representation of some of my work.</p>
-					    		<p>For project inquiries click the link below or simply email me at lols@veryrarecandy.com</p>
-					    		<p class="contact" id="hideForm"><a href="#">&#9742; Get in touch.</a></p>
-
+					    		<p>For project inquiries click the link below or simply...</p>
+					    		<p class="contact" id="hideForm"><a href="mailto:lols@veryrarecandy.com">&#9742; Get in touch.</a></p>
 					    	</div>
 					    </figure>
 
@@ -267,9 +266,9 @@
 
 
 
-
+			// DOES NOT WORK IN FIREFOX
 			// On click or on touchend
-			$('.contact').on('click touchend', function() {
+			/**$('.contact').on('click touchend', function() {
 				$('#card').toggleClass('flipped');
 			})
   
@@ -279,7 +278,7 @@
 				.swipeEvents()
 				.bind("swipeLeft",  function(){ $('#card').toggleClass('flipped'); })
 				.bind("swipeRight", function(){ $('#card').toggleClass('flipped'); });
-
+			**/
 
 
 

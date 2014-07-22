@@ -243,8 +243,9 @@ body {
 #section-3 {
 	z-index: 4;
 	height: 100%;
-	background: -webkit-radial-gradient(bottom left, ellipse cover, rgba(255,184,222,0.2) 0%,rgba(219, 255, 194,0.5) 50%),  
-	url('../img/background_about.jpeg');  
+	background-image: radial-gradient(farthest-corner at 45px 45px , rgba(255,184,222,0.2) 0%, rgba(219, 255, 194,0.5) 50%), url('../img/background_about.jpeg');
+	background: -webkit-radial-gradient(bottom left, ellipse cover, rgba(255,184,222,0.2) 0%,rgba(219, 255, 194,0.5) 50%), url('../img/background_about.jpeg'); 
+
 	background-size: 100%;
 	background-position: top center;
 }
@@ -342,6 +343,10 @@ body {
 
 #card > figure.front > div, #card > figure.back > div {
 	padding: 0px 10px;
+}
+
+#form_div {
+
 }
 
 #form_div > div.row > div{
